@@ -7,7 +7,9 @@ const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:4200'
+  }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
