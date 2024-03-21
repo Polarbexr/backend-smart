@@ -16,5 +16,8 @@
   "repository": "https://github.com/Polarbexr/backend-smart.git",
   "author": "Polarbexr <2121100624@soy.utj.edu.mx>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
 }

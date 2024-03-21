@@ -1,3 +1,7 @@
+require('dotenv').config()
+
+const http = require("http")
+
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -10,9 +14,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(require('./routes/correoRoute'));
 
 
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`Servidor en funcionamiento en el puerto ${PORT}`);
+const PORT = process.env.PORT;
+app.listen(process.env.PORT,function ()  {
+    console.log("Aplicacion ejecutando en puerto:" + PORT);
 });
 
 
